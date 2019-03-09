@@ -1,0 +1,20 @@
+server:
+  port: 7201
+spring:
+  application:
+    name: dm-item-consumer
+  kafka:
+    producer:
+      retries: 0
+      #batch-size: 16384 # 每次批量发送消息的数量
+      bootstrap-servers: 192.168.128.132:9092
+      buffer-memory: 33554432
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer # 指定消息key和消息体的编解码方式
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer #添加
+    listener:
+      poll-timeout: 10000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@localhost:7776/eureka/
+moduleName: dm-item-consumer
