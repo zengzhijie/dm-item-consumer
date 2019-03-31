@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-public class DmItemConsumerApplication  {
+public class DmItemConsumerApplication   {
 
     public static void main(String[] args) {
         SpringApplication.run(DmItemConsumerApplication.class, args);
